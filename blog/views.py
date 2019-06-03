@@ -5,9 +5,10 @@ def allblogs(request):
 
     blogs = Blog.objects
 
-    return render(request, 'blog/home.html', {'blogs': blogs})
+    return render(request, 'blog/home.html', {'blogs': blogs, 'blog': 'active'})
 
 def detail(request, blog_id):
     detaiblog = get_object_or_404(Blog, pk=blog_id)
-    return render(request, 'blog/detail.html', {'blog':detaiblog})
+
+    return render(request, 'blog/detail.html', {'blog':detaiblog, 'detail' : 'active' })
 
