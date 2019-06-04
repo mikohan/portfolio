@@ -28,7 +28,7 @@
             <div class="navbar-nav ml-auto">
                 <a class="nav-item nav-link {{ home }}" href="{% url 'home' %}">Home <span class="sr-only">(current)</span></a>
                 <a class="nav-item nav-link" href="{% static '001.pdf' %}">Pdf</a>
-                <a class="nav-item nav-link {{ blog }}" href="{% url 'allblogs'%}">Blog</a>
+                <a class="nav-item nav-link {{ blog }} {{ detail }}" href="{% url 'allblogs'%}">Blog</a>
             </div>
         </div>
     </nav>
@@ -41,15 +41,10 @@
     </div>
 </main>
 
-<footer class="text-muted">
-    <div class="container">
-        <p class="float-right">
-            <a href="#">Back to top</a>
-        </p>
-        <p>Album example is &copy; Bootstrap, but please download and customize it for yourself!</p>
-        <p>New to Bootstrap? <a href="https://getbootstrap.com/">Visit the homepage</a> or read our <a
-                href="/docs/4.3/getting-started/introduction/">getting started guide</a>.</p>
-    </div>
+<footer class="footer mt-auto py-3 fixed-bottom">
+  <div class="container">
+    <span class="text-muted">Place sticky footer content here.</span>
+  </div>
 </footer>
 <script crossorigin="anonymous" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
         src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
